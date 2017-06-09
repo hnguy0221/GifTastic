@@ -1,0 +1,31 @@
+.app-container
+{
+    background-image: url("../images/wood_pattern.png");
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 0%;
+    border: 2px solid black;
+}
+
+.buttons-row
+{
+    /*margin-left: 0%;*/
+    padding-top: 10px;
+}
+
+img
+{
+    width: 200px;
+    height: 100px;
+}
+
+/*@media screen and (max-width: 400px)
+{
+    #img-4
+    {
+        left: 24px;
+        top: 58px;
+    } 
+}*/
