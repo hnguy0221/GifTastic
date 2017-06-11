@@ -11,7 +11,8 @@
 
 .buttons-row
 {
-    /*margin-left: 0%;*/
+    margin-left: 0%;
+    margin-right: 0%;
     padding-top: 10px;
 }
 
@@ -21,6 +22,21 @@ img
     height: 100px;
 }
 
+label
+{
+    font-weight: bolder;
+}
+
+#add-animal, .animal
+{
+    color: whitesmoke;
+    background-color: #008080;
+}
+
+#animal-form
+{
+    margin-right: 10%;
+}
 /*@media screen and (max-width: 400px)
 {
     #img-4
