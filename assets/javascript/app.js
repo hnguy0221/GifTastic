@@ -143,7 +143,7 @@ function displayAnimalInfo()
         animal + "&api_key=" + api_key;
     console.log(queryURL);
 
-    // Creates AJAX call for the specific movie button being clicked
+    // Creates AJAX call for the specific animal button being clicked
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -242,7 +242,7 @@ function addAnimal()
     // This line of code will grab the input from the textbox
     var animal = $("#animal-input").val().trim();
 
-    // The movie from the textbox is then added to our array
+    // The animal from the textbox is then added to our array
     if (animal === "")
     {
         alert("Please enter an animal!");
@@ -256,7 +256,7 @@ function addAnimal()
         animalsArr.push(animal);
     }
 
-    //reset the movie text input field to empty string
+    //reset the animal text input field to empty string
     reset();
 
     //calling renderButtons which handles the processing of our animals array
