@@ -160,7 +160,8 @@ function displayAnimalInfo()
             imgOriginal = response["data"][i]["images"]["original"]["url"];
             console.log("Original Still Image: " + imgOriginalStill);
             console.log("Original Image: " + imgOriginal);
-            //The below logic is to display 1 image per column up 4 images per row.
+            //The below logic is to display 4 images per row. Each image is displayed in its
+            //separate column.
             if (i === 0)
             {
                 animalStr = "<div class='row'>";
