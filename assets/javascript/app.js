@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : game.js
+// Name        : app.js
 // Author      : Hai Nguyen
 // Version     :
 // Copyright   : 2017
@@ -56,11 +56,12 @@ function seqOrderedSearch(searchItem)
     var i;
     var found = false;
     var location;
-    searchItem = searchItem.toLowerCase();//convert to lower case
+    var animal;
 
+    searchItem = searchItem.toLowerCase();//convert to lower case
     for (i = 0; i < animalsArr.length; i++)
     {
-        var animal = animalsArr[i].toLowerCase(); //convert to lower case
+        animal = animalsArr[i].toLowerCase(); //convert to lower case
         if (animal >= searchItem)
         {
             found = true;
