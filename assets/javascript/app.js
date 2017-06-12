@@ -255,13 +255,13 @@ function addAnimal()
     else
     {
         animalsArr.push(animal);
+
+        //reset the animal text input field to empty string
+        reset();
+
+        //calling renderButtons which handles the processing of our animals array
+        renderButtons();
     }
-
-    //reset the animal text input field to empty string
-    reset();
-
-    //calling renderButtons which handles the processing of our animals array
-    renderButtons();
 }
 
 $(document).ready(function()
