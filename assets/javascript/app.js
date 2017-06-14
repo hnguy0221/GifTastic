@@ -133,7 +133,7 @@ function reset()
 //============================================================================
 function displayAnimalInfo()
 {
-    var animalStr;
+    var htmlStr;
     var imgOriginalStill;
     var imgOriginal;
     var rated;
@@ -164,44 +164,44 @@ function displayAnimalInfo()
             //separate column.
             if (i === 0)
             {
-                animalStr = "<div class='row'>";
-                animalStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
+                htmlStr = "<div class='row'>";
+                htmlStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
                     "<img class='img-responsive thumbnail gif' src='" + imgOriginalStill + "' data-still='" + imgOriginalStill + 
                     "' data-animate='" + imgOriginal + "' data-state='still' /></div>";
                 if (i === len-1)
                 {
-                    animalStr += "</div>";
+                    htmlStr += "</div>";
                 }
-                console.log("In if (i === 0): " + animalStr);
+                console.log("In if (i === 0): " + htmlStr);
             }
             else if (i % 4 !== 0)
             {
-                animalStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
+                htmlStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
                     "<img class='img-responsive thumbnail gif' src='" + imgOriginalStill + "' data-still='" + imgOriginalStill + 
                     "' data-animate='" + imgOriginal + "' data-state='still' /></div>";
                 if (i === len-1)
                 {
-                    animalStr += "</div>";
+                    htmlStr += "</div>";
                 }
-                console.log("In else if (i % 4 !== 0): " + animalStr);
+                console.log("In else if (i % 4 !== 0): " + htmlStr);
             }
             else if (i % 4 === 0) //display up to 4 images per row
             {
-                animalStr += "</div>";
-                animalStr += "<div class='row'>";
-                animalStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
+                htmlStr += "</div>";
+                htmlStr += "<div class='row'>";
+                htmlStr += "<div class='col-xs-3 col-sm-3'>Rating: " + rated +
                     "<img class='img-responsive thumbnail gif' src='" + imgOriginalStill + "' data-still='" + imgOriginalStill + 
                     "' data-animate='" + imgOriginal + "' data-state='still' /></div>";
                 if (i === len-1)
                 {          
-                    animalStr += "</div>";
+                    htmlStr += "</div>";
                 }
-                console.log("In else if (i % 4 === 0): " + animalStr);
+                console.log("In else if (i % 4 === 0): " + htmlStr);
             }
         }
         //var myJSON = JSON.stringify(response["data"]);
         //$("#animals-view").html(myJSON);
-        $("#animals-view").html(animalStr);
+        $("#animals-view").html(htmlStr);
     });
 }
 
@@ -236,8 +236,19 @@ function playGif()
     }
 }
 
+//============================================================================
+// Name        : addAnimal
+// Author      : Hai Nguyen
+// Version     :
+// Copyright   : 2017
+// Description : This function adds a new animal to the animal array, calls 
+//               the reset() function to empty the input text field and calls
+//               the renderButtons() to render the animal buttons including 
+//               the new one that was just added.
+//============================================================================
 function addAnimal()
 {
+    //prevent form from trying to submit/refresh the page.
     event.preventDefault();
 
     // This line of code will grab the input from the textbox
